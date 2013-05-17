@@ -68,6 +68,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 ##Change Log
 ###Version 1.0.2
 - Hide 'add more' link button when limit = 1
+- Bug fixed: clearInputs=false is not working.
 
 ###Version 1.0.1
 - Added relCopy.js minified version.
