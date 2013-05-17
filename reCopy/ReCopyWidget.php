@@ -3,6 +3,7 @@ class ReCopyWidget extends CWidget {
 
     public $targetClass='clone'; //Target CSS class target for duplicate
     public $limit=0; //The number of allowed copies. Default: 0 is unlimited
+    public $addButtonId; // Add button id. Set id differently if this widget is called multiple times per page.
     public $addButtonLabel='Add more'; //Add button text.
     public $addButtonCssClass=''; //Add button CSS class.
     public $removeButtonLabel='Remove'; //Remove button text
@@ -24,6 +25,10 @@ class ReCopyWidget extends CWidget {
             $this->_assetsUrl = Yii::app()->assetManager->publish($assetsDir);
         }
         
+        $this->addButtonId=trim($this->addButtonId);
+        if(empty($this->addButtonId))
+            $this->addButtonId='recopy-add';
+        
         if($this->limit)
             $this->limit= (is_numeric($this->limit) && $this->limit > 0)? (int)ceil($this->limit):0;
         
@@ -35,10 +40,10 @@ class ReCopyWidget extends CWidget {
     public function run() {
         Yii::app()->clientScript
             ->registerScriptFile($this->_assetsUrl . '/reCopy.min.js', CClientScript::POS_HEAD)
-            ->registerScript(__CLASS__, '
+            ->registerScript(__CLASS__.$this->addButtonId, '
                 $(function(){
                     var removeLink = \' <a class="'.$this->removeButtonCssClass.'" href="#" onclick="$(this).parent().slideUp(function(){ $(this).remove() }); return false">'.$this->removeButtonLabel.'</a>\';
-                    $("a.recopy-add").relCopy({'.implode(', ', array_filter(array(
+                    $("a#'.$this->addButtonId.'").relCopy({'.implode(', ', array_filter(array(
                         empty($this->excludeSelector)?'':'excludeSelector: "'.$this->excludeSelector.'"',
                         empty($this->limit)? '': 'limit: '.$this->limit,
                         empty($this->copyClass)? '': 'copyClass: "'.$this->copyClass.'"',
@@ -50,6 +55,10 @@ class ReCopyWidget extends CWidget {
             ', CClientScript::POS_END);
         
         if($this->limit==0 || $this->limit > 1)
-            echo CHtml::link($this->addButtonLabel, '#', array('rel'=>'.'.$this->targetClass, 'class'=>implode(' ', array_filter(array('recopy-add', $this->addButtonCssClass)))));
+            echo CHtml::link($this->addButtonLabel, '#', array(
+                'id'=>$this->addButtonId,
+                'rel'=>'.'.$this->targetClass, 
+                'class'=>$this->addButtonCssClass)
+            );
     }
 }//end class
