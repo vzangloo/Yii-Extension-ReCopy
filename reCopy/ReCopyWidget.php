@@ -48,6 +48,7 @@ class ReCopyWidget extends CWidget {
                 });
             ', CClientScript::POS_END);
         
-        echo CHtml::link($this->addButtonLabel, '#', array('rel'=>'.'.$this->targetClass, 'class'=>implode(' ', array_filter(array('recopy-add', $this->addButtonCssClass)))));
+        if($this->limit==0 || $this->limit > 1)
+            echo CHtml::link($this->addButtonLabel, '#', array('rel'=>'.'.$this->targetClass, 'class'=>implode(' ', array_filter(array('recopy-add', $this->addButtonCssClass)))));
     }
 }//end class
