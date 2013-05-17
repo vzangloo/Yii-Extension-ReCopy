@@ -66,6 +66,9 @@ Call this widget in the view file, as in the examples, where this widget itself 
 - **clearInputs**: Boolean option to clear each copies text input fields or textarea.
 
 ##Change Log
+###Version 1.0.2
+- Hide 'add more' link button when limit = 1
+
 ###Version 1.0.1
 - Added relCopy.js minified version.
 - Added other useful params: limit, excludeSelector, copyClass, clearInputs.
