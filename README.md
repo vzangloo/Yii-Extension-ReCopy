@@ -66,6 +66,9 @@ Call this widget in the view file, as in the examples, where this widget itself 
 - **clearInputs**: Boolean option to clear each copies text input fields or textarea.
 
 ##Change Log
+###Version 1.0.3
+- Bug fixed: multiple call this widget per page doesn't work.
+
 ###Version 1.0.2
 - Hide 'add more' link button when limit = 1
 - Bug fixed: clearInputs=false is not working.
