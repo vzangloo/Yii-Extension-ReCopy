@@ -42,7 +42,8 @@ class ReCopyWidget extends CWidget {
                         empty($this->excludeSelector)?'':'excludeSelector: "'.$this->excludeSelector.'"',
                         empty($this->limit)? '': 'limit: '.$this->limit,
                         empty($this->copyClass)? '': 'copyClass: "'.$this->copyClass.'"',
-                        empty($this->clearInputs) || !is_bool($this->clearInputs)?'': 'clearInputs: true',
+                        $this->clearInputs===true? 'clearInputs: true':'',
+                        $this->clearInputs===false? 'clearInputs: false':'',
                         'append: removeLink',
                     ))).'});	
                 });
