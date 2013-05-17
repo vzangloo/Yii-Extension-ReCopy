@@ -1,0 +1,16 @@
+assets/*
+!assets/.gitignore
+!protected/modules/*/assets/*
+!protected/extensions/*/assets/*
+!protected/extensions/*/*/assets/*
+protected/runtime/*
+!protected/runtime/.gitignore
+*.orig
+.project
+.DS_Store
+nbproject
+/nbproject/private/
+sqlnet.log
+Thumbs.db
+error_log
+*.bin
