@@ -54,7 +54,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 ~~~
 
 ###Example 3: Multiple widget call per page
-Assign each widget call with unique 'addButtonId'.
+Assign each widget call with unique 'targetClass' and 'addButtonId'.
 ~~~
 [php]
 <p class="education-history">
