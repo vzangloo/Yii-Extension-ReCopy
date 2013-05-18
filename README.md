@@ -4,7 +4,9 @@ Yii-Extension-ReCopy
 Yii PHP Framework extension for duplicate form fields
 
 
-Duplicate form fields, using jQuery relCopy plugin version 1.1.0 from Andres Vidal.
+Duplicate form fields, using jQuery relCopy plugin version 1.1.0 from Andres Vidal.    
+  
+relCopy, short for rel copy, is a jQuery plugin that copies any DOM element, and its children, targeted by an action link's rel tag. It is typically used in forms to copy the file upload fields for multiple file uploads. It can also be customized for any purpose that requires multiple copies of fields with limits and other features.  
 ##Requirements
 - jQuery
 - Yii 1.1 or above
