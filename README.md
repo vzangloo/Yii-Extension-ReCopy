@@ -57,6 +57,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 
 - **targetClass**: Targeted CSS class for duplication.
 - **limit**: The number of allowed copies. Default: 0 is unlimited
+- **addButtonId** (>= v1.0.3): Add button id. **Set id differently if this widget is called multiple times per page**.
 - **addButtonLabel**: Add more button text.
 - **addButtonCssClass**: Add more button CSS class.
 - **removeButtonLabel**: Remove button text.
@@ -66,6 +67,10 @@ Call this widget in the view file, as in the examples, where this widget itself 
 - **clearInputs**: Boolean option to clear each copies text input fields or textarea.
 
 ##Change Log
+###Version 1.0.3
+- Bug fixed: multiple call this widget per page doesn't work.
+- Added param 'addButtonId' to handle multiple call this widget per page.
+
 ###Version 1.0.2
 - Hide 'add more' link button when limit = 1
 - Bug fixed: clearInputs=false is not working.
