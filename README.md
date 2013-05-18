@@ -69,6 +69,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 ##Change Log
 ###Version 1.0.3
 - Bug fixed: multiple call this widget per page doesn't work.
+- Added param 'addButtonId' to handle multiple call this widget per page.
 
 ###Version 1.0.2
 - Hide 'add more' link button when limit = 1
