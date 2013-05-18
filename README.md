@@ -58,7 +58,6 @@ Call this widget in the view file, as in the examples, where this widget itself 
 ###Example 3: Multiple widget call per page
 Assign each widget call with unique 'targetClass' and 'addButtonId'.
 ~~~
-[php]
 <p class="education-history">
   School attended: <input type="text" name="school[]" class='input'/>
   Year: <input type="text" name="school_year[]" class='input'/>
