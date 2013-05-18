@@ -30,7 +30,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 ?>
 ~~~
 
-###Example 2
+###Example 2: Customization
 ~~~
 <div class="clone-this">
   First name: <input type="text" name="firstname[]" class='input'/>
@@ -49,6 +49,39 @@ Call this widget in the view file, as in the examples, where this widget itself 
      'removeButtonLabel'=>'Remove this',
      'removeButtonCssClass'=>'remove-clone',
      'limit'=> 5,
+  )); 
+?>
+~~~
+
+###Example 3: Multiple widget call per page
+Assign each widget call with unique 'addButtonId'.
+~~~
+[php]
+<p class="education-history">
+  School attended: <input type="text" name="school[]" class='input'/>
+  Year: <input type="text" name="school_year[]" class='input'/>
+</p>
+
+<?php 
+  $this->widget('ext.widgets.reCopy.ReCopyWidget', array(
+     'targetClass'=>'education-history',
+     'addButtonId'=>'add-new-education',
+     'limit'=>3,
+  )); 
+?>
+
+<p class="qualification">
+  Certificate: <input type="text" name="certificate[]" class='input'/>
+  Year: <input type="text" name="cert_year[]" class='input'/>
+</p>
+ 
+<?php 
+  $this->widget('ext.widgets.reCopy.ReCopyWidget', array(
+     'targetClass'=>'qualification',
+     'addButtonId'=>'add-new-qualification',
+     'removeButtonLabel'=>'Remove this',
+     'removeButtonCssClass'=>'remove-clone',
+     'limit'=>5,
   )); 
 ?>
 ~~~
