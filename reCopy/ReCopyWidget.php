@@ -38,6 +38,8 @@ class ReCopyWidget extends CWidget {
      * Execute the widgets
      */
     public function run() {
+        if($this->limit==1) return ;
+        
         Yii::app()->clientScript
             ->registerScriptFile($this->_assetsUrl . '/reCopy.min.js', CClientScript::POS_HEAD)
             ->registerScript(__CLASS__.$this->addButtonId, '
@@ -54,7 +56,6 @@ class ReCopyWidget extends CWidget {
                 });
             ', CClientScript::POS_END);
         
-        if($this->limit==0 || $this->limit > 1)
             echo CHtml::link($this->addButtonLabel, '#', array(
                 'id'=>$this->addButtonId,
                 'rel'=>'.'.$this->targetClass, 
