@@ -101,8 +101,8 @@ Assign each widget call with unique 'targetClass' and 'addButtonId'.
 
 ##Change Log
 ###Version 1.0.3
-- Bug fixed: multiple call this widget per page doesn't work.
-- Added param 'addButtonId' to handle multiple call this widget per page.
+- Bug fixed: multiple widget call per page doesn't work.
+- Added param 'addButtonId' to handle multiple widget call per page.
 
 ###Version 1.0.2
 - Hide 'add more' link button when limit = 1
