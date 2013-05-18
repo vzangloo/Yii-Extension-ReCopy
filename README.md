@@ -1,7 +1,7 @@
 Yii-Extension-ReCopy
 ====================
 
-Yii PHP Framework extension for duplicate form fields
+Yii PHP Framework extension for duplicate form fields, or any DOM element and its children.
 
 
 Duplicate form fields, using jQuery relCopy plugin version 1.1.0 from Andres Vidal.    
