@@ -57,7 +57,7 @@ Call this widget in the view file, as in the examples, where this widget itself 
 
 - **targetClass**: Targeted CSS class for duplication.
 - **limit**: The number of allowed copies. Default: 0 is unlimited
-- **addButtonId**: Add button id. **Set id differently if this widget is called multiple times per page**.
+- **addButtonId** (>= v1.0.3): Add button id. **Set id differently if this widget is called multiple times per page**.
 - **addButtonLabel**: Add more button text.
 - **addButtonCssClass**: Add more button CSS class.
 - **removeButtonLabel**: Remove button text.
