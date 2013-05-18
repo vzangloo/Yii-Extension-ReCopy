@@ -98,7 +98,7 @@ Assign each widget call with unique 'targetClass' and 'addButtonId'.
 - **removeButtonCssClass**: Remove button CSS class.
 - **excludeSelector**: A jQuery selector used to exclude an element and its children. Example: ".exclude"
 - **copyClass**: A class to attach to each copy. Default: "copy"
-- **clearInputs**: Boolean option to clear each copies text input fields or textarea.
+- **clearInputs**: Boolean option to clear each copies text input fields or textarea. Default: true.
 
 ##Change Log
 ###Version 1.0.3
